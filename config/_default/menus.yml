@@ -1,0 +1,13 @@
+main:
+  - name: "Over mij"
+    pageRef: "/over-mij"
+    weight: 20
+  - name: "Diensten"
+    pageRef: "/diensten"
+    weight: 30
+  - name: "F.A.Q."
+    pageRef: "/faq"
+    weight: 40
+  - name: "Contact"
+    pageRef: "/contact"
+    weight: 50

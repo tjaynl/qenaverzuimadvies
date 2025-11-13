@@ -1,0 +1,13 @@
+<header class="site-header">
+    <div class="site-header__inner wrapper">
+        <a href="/" class="brand">
+            <span>{{ site.Title }}</span>
+        </a>
+        <button class="hamburger">
+            <span class="bar bar--1"></span>
+            <span class="bar bar--2"></span>
+            <span class="bar bar--3"></span>
+        </button>
+        {{ partial "shared/menu.html" (dict "page" . "menuID" "main") }}
+    </div>
+</header>

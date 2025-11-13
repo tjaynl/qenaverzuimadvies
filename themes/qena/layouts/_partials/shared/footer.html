@@ -1,0 +1,18 @@
+<footer class="[] [] [ py-l-xl ]">
+    <div class="wrapper">
+        <small>Copyright {{ now.Year }} door {{ .Site.Title }}. All rights reserved.</small>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+  });
+</script>

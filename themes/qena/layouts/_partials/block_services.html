@@ -1,0 +1,55 @@
+{{- $inner := . -}}
+{{- if or (eq $inner "") (eq $inner nil) -}}
+{{- with page.Site.GetPage "blocks/services.md" -}}
+{{- $inner = .RawContent -}}
+{{- end -}}
+{{- end -}}
+{{- $services := where page.Site.RegularPages "Section" "services" -}}
+<section class="services">
+    {{ if $inner }}<div class="wrapper wrapper--small">
+        {{- markdownify $inner -}}
+    </div>{{ end }}
+    <div class="wrapper">
+        <div class="filter">
+            <div class="dropdown-multiselect">
+                <button type="button" class="dropbtn">{{ i18n "Filter tags" }}</button>
+                <div class="dropdown-content">
+                {{ range $name, $taxonomy := site.Taxonomies.tags }}
+                    <label>
+                    <input type="checkbox" class="filter-checkbox" value="{{ $name | urlize }}">
+                    {{ $name }}
+                    </label>
+                {{ end }}
+                </div>
+            </div>
+        </div>
+        <ul class="contentitems grid services" data-layout="thirds" role="list" data-pagesize="{{ if page.Site.Data.settings.show_all_services }}99{{ else }}{{ page.Site.Data.settings.page_size }}{{ end }}">
+            {{ range $index,$service := $services }}
+            <li class="item{{ range .Params.tags }} tag_{{ . }}{{ end }}">
+                {{- if (resources.GetMatch .Params.image) -}}
+                {{- $serviceimage := ((resources.GetMatch .Params.image).Fill `1200x600 jpg Smart q50`).RelPermalink -}}
+                {{- if $serviceimage -}}<a href="{{ .RelPermalink }}">
+                    <div class="img"><img data-src="{{ $serviceimage }}" alt="{{ .Title }}" style="cursor: pointer;"
+                            onclick="document.location.href='{{ .RelPermalink }}';" /></div>
+                </a>{{- end -}}
+                {{- end -}}
+                <h3 class="h4">{{ .Title | safeHTML }}</h3>
+                {{ if .Params.date }}<div class="meta">
+                    <div>
+                        <img src="/img/icons/material-symbols/200/rounded/calendar_month-fill.svg"
+                            class="black_2_textDark" alt="" />
+                        {{ .Date | time.Format ":date_medium"}}
+                    </div>
+                </div>
+                {{ end }}
+                <div class="summary">
+                    <p>{{ substr (.Summary | plainify) 0 190 | safeHTML }}...</p>
+                    <p><a href="{{ .RelPermalink }}" class="button ghost smaller">{{ i18n "Read more" }}</a></p>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+        <a class="button secondary" data-button-ghost id="loadmoreposts" onclick="loadMorePosts();">{{ i18n "Read more posts" }}...</a>
+        <script src="/js/filter.js" charset="utf-8"></script>
+    </div>
+</section>

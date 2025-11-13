@@ -1,0 +1,33 @@
+{{/* layouts/shortcodes/wrapper.html */}}
+
+{{ $extraClass := .Get "class" | default "" }}
+{{ $variant := .Get "variant" | default "" }}
+{{ $maxWidth := .Get "max_width" }}
+{{ $paddingInline := .Get "padding_inline" }}
+{{ $extraStyle := .Get "style" | default "" }}
+
+{{/* classes opbouwen handmatig */}}
+{{ $baseClass := "wrapper" }}
+{{ $variantClass := cond (ne $variant "") (printf "%s--%s" $baseClass $variant) "" }}
+{{ $classList := slice $baseClass }}
+{{ if ne $variantClass "" }}{{ $classList = $classList | append $variantClass }}{{ end }}
+{{ if ne $extraClass "" }}{{ $classList = $classList | append $extraClass }}{{ end }}
+{{ $classes := delimit $classList " " }}
+
+{{/* inline CSS-variabelen opbouwen */}}
+{{ $vars := slice }}
+{{ if $maxWidth }}{{ $vars = $vars | append (printf "--wrapper-max-width: %s;" $maxWidth) }}{{ end }}
+{{ if $paddingInline }}{{ $vars = $vars | append (printf "--wrapper-padding-inline: %s;" $paddingInline) }}{{ end }}
+
+{{/* samengestelde style-string (alleen tonen als er iets is) */}}
+{{ $styleContent := "" }}
+{{ if gt (len $vars) 0 }}
+  {{ $styleContent = (strings.Join $vars " ") }}
+{{ end }}
+{{ if ne $extraStyle "" }}
+  {{ $styleContent = printf "%s %s" $styleContent $extraStyle | trim }}
+{{ end }}
+
+<div class="{{ $classes }}"{{ if ne $styleContent "" }} style="{{ $styleContent }}"{{ end }}>
+  {{ .Inner | markdownify }}
+</div>

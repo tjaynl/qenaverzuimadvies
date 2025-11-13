@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Re-integratiebegeleiding | Q &amp; A verzuimadvies</title>
+
+    
+    
+        
+            <link rel="stylesheet" href="/css/main.css">
+        
+    
+
+
+
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner wrapper">
+        <a href="/" class="brand">
+            <span>Q &amp; A verzuimadvies</span>
+        </a>
+        <button class="hamburger">
+            <span class="bar bar--1"></span>
+            <span class="bar bar--2"></span>
+            <span class="bar bar--3"></span>
+        </button>
+        
+<nav class="nav" aria-label="Hoofdmenu">
+  <ul class="nav__list" role="navigation"><li class="nav__item">
+        <a
+          href="/over-mij/"
+          class="nav__link"
+        >Over mij</a>
+    </li><li class="nav__item">
+        <a
+          href="/diensten/"
+          class="nav__link"
+        >Diensten</a>
+    </li><li class="nav__item">
+        <a
+          href="/faq/"
+          class="nav__link"
+        >F.A.Q.</a>
+    </li><li class="nav__item">
+        <a
+          href="/contact/"
+          class="nav__link"
+        >Contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+<script>
+(function () {
+  var OPEN_CLASS = 'is-open';
+  var TOGGLE_SEL = '.nav__toggle';
+
+  function closeItem(item) {
+    if (!item) return;
+    item.classList.remove(OPEN_CLASS);
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function openItem(item) {
+    if (!item) return;
+    item.classList.add(OPEN_CLASS);
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (toggle) toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function toggleItem(item) {
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (!toggle) return;
+    if (toggle.getAttribute('aria-expanded') === 'true') closeItem(item);
+    else openItem(item);
+  }
+
+  function closeAll() {
+    document.querySelectorAll('.nav__item.' + OPEN_CLASS).forEach(function (item) {
+      closeItem(item);
+    });
+  }
+
+  function init() {
+    
+    closeAll();
+
+    
+    document.querySelectorAll(TOGGLE_SEL).forEach(function (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var item = toggle.closest('.nav__item');
+        toggleItem(item);
+      });
+    });
+
+    
+    window.addEventListener('pageshow', function (ev) {
+      if (ev.persisted) closeAll();
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+
+    </div>
+</header>
+  <main><section class="service py-l-xl">
+    <div class="wrapper wrapper--wide">
+        <ul class="breadcrumbs"><li><a href="/"></a></li><li><a href="/diensten/">Services</a></li><li><a href="">Re-integratiebegeleiding</a></li></ul>
+        <h1 class="text--center">Re-integratiebegeleiding</h1>
+        
+        <div class="meta text--center">
+            
+            
+            <div>
+                <img src="/img/icons/material-symbols/200/rounded/label-fill.svg"class="black_2_textDark" alt="" />
+                <ul role="list">
+                    
+                    <li><a href="/blog/?tag=re-intergratie">re-intergratie</a>
+                    
+                </ul>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="wrapper wrapper--wide"><img src="/uploads/photos/08.jpg" alt="" class="featuredimage" />
+    </div>
+    <div class="wrapper wrapper--small service">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus egestas arcu, in vestibulum tortor pellentesque vitae. Curabitur dapibus tempor libero id vulputate. Proin sodales, nisi quis laoreet commodo, sapien quam consectetur lorem, ut molestie augue eros in enim. Nam tincidunt lobortis sapien, et molestie urna viverra sollicitudin. In hac habitasse platea dictumst. Donec placerat vestibulum luctus. Sed vel convallis nisi.</p>
+<p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla porta faucibus diam, vitae accumsan odio posuere rhoncus. Nunc pellentesque felis id sapien posuere, et commodo nisi pharetra. Cras pulvinar, urna iaculis pretium facilisis, odio dolor dictum leo, et fringilla libero ante eget elit. Vestibulum quis volutpat ligula. Fusce porta et mi luctus convallis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla id turpis tempor, euismod quam in, sollicitudin nisi. Vivamus a enim bibendum, posuere orci ac, lacinia erat. Morbi varius sapien efficitur, pellentesque elit in, feugiat risus. Vivamus in scelerisque nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+<p>Aliquam erat volutpat. Pellentesque mollis dolor sed pretium tincidunt. Morbi pretium aliquam urna et maximus. Suspendisse potenti. Suspendisse vitae mauris et felis tincidunt vulputate. Quisque nec est leo. Cras ut purus nec metus efficitur ullamcorper id ut orci. Nullam egestas nisi sagittis, placerat nunc sed, bibendum ipsum. Proin fermentum mi nec molestie hendrerit. Nullam a justo tortor. Etiam consequat sapien purus, eu maximus dolor pretium vel. Phasellus egestas arcu sapien. Duis id odio id quam viverra gravida non non diam. Maecenas commodo nulla egestas magna faucibus aliquet.</p>
+
+    </div>
+</section>
+    <section class="cta">
+    <div class="wrapper">
+        <div class="switcher box">
+            <div class="text flow">
+                <div><h3 id="ga-vandaag-nog-aan-de-slag-met-q-en-a-verzuimadvies">Ga vandaag nog aan de slag met Q en A Verzuimadvies</h3>
+<p>Krijg grip op verzuim binnen uw organisatie met persoonlijk en deskundig advies van Annemiek. Samen werken we aan een gezonde en betrokken werkvloer.</p>
+<a href="/contact/" class="button" title="Neem contact op">Neem contact op</a>
+
+
+</div>
+            </div>
+            <div class="image">
+                <div><p><img src="/img/undraw_teamwork_8val.svg" alt="" class="is_svg" /></p></div>
+            </div>
+        </div>
+    </div>
+</section></main>
+  <footer class="[] [] [ py-l-xl ]">
+    <div class="wrapper">
+        <small>Copyright 2025 door Q &amp; A verzuimadvies. All rights reserved.</small>
+    </div>
+</footer>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

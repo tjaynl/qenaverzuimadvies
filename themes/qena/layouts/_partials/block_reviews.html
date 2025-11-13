@@ -1,0 +1,15 @@
+{{- $inner := . -}}
+{{- if or (eq $inner "") (eq $inner nil) -}}
+    {{- $inner = "Empty block found. Consider creating a 'content/blocks/reviews.md' file." -}}
+    {{- with page.Site.GetPage "blocks/reviews.md" -}}
+        {{- $inner = .RawContent -}}
+    {{- end -}}
+{{- end -}}
+<section class="reviews py-xl-3xl bg-neutral-50">
+    <div class="wrapper wrapper--small text--center mb-s-l">
+        {{- markdownify $inner -}}
+    </div>
+    <div class="wrapper">
+        {{ partial "reviews.html" . }}
+    </div>
+</section>

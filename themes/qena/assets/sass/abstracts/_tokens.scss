@@ -1,0 +1,77 @@
+@use "colors" as *;
+
+// -----------------------------------------------------------------------------
+//
+// -----------------------------------------------------------------------------
+
+$active-theme: $light;
+
+
+// -----------------------------------------------------------------------------
+// Navigation
+// -----------------------------------------------------------------------------
+
+$nav-list-gap: 1px;
+
+$nav-link-foreground: var(--primary-900);
+$nav-link-foreground-hover: var(--primary-600);
+$nav-link-foreground-active: var(--neutral-50);
+
+$nav-link-background: transparent;
+$nav-link-background-hover: var(--primary-100);
+$nav-link-background-active: var(--primary-500);
+
+$nav-link-font-family: inherit;
+$nav-link-font-size: var(--fs-step-0);
+$nav-link-font-weight: inherit;
+$nav-link-line-height: 1.1;
+
+$nav-link-padding: var(--space-m);
+$nav-link-padding-mobile: var(--space-m);
+$nav-link-border-radius: var(--radius-m);
+
+
+//
+$subnav-link-foreground: var(--neutral-400);
+$subnav-link-foreground-hover: var(--neutral-600);
+$subnav-link-foreground-active: var(--neutral-800);
+
+$subnav-link-background: var(--neutral-0);
+$subnav-link-background-hover: var(--neutral-200);
+$subnav-link-background-active: var(--primary-300);
+
+
+// -----------------------------------------------------------------------------
+// Hamburger
+// -----------------------------------------------------------------------------
+
+$hamburger-background: transparent;
+$hamburger-padding: var(--space-2xs);
+$hamburger-animation-timing: 200ms ease-in-out;
+$hamburger-border: none;
+$hamburger-border-radius: .125rem;
+
+$hamburger-bar-color: var(--primary-950);
+$hamburger-bar-width: 36px;
+$hamburger-bar-height: 6px;
+$hamburger-bar-gap: 4px;
+
+
+// -----------------------------------------------------------------------------
+// Button
+// -----------------------------------------------------------------------------
+
+$button-font-size: var(--fs-step--1);
+$button-font-weight: var(--fw-medium);
+
+$button-foreground: var(--neutral-50);
+$button-foreground-hover: var(--neutral-50);
+$button-background: var(--neutral-500);
+$button-background-hover: var(--neutral-600);
+
+$button-padding: .75rem 1.5rem;
+
+$button-border-width: 2px;
+$button-border-style: solid;
+$button-border-color: var(--button-border-color, transparent);
+$button-border-radius: var(--radius-m);

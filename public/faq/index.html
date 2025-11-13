@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Veel gestelde vragen | Q &amp; A verzuimadvies</title>
+
+    
+    
+        
+            <link rel="stylesheet" href="/css/main.css">
+        
+    
+
+
+
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner wrapper">
+        <a href="/" class="brand">
+            <span>Q &amp; A verzuimadvies</span>
+        </a>
+        <button class="hamburger">
+            <span class="bar bar--1"></span>
+            <span class="bar bar--2"></span>
+            <span class="bar bar--3"></span>
+        </button>
+        
+<nav class="nav" aria-label="Hoofdmenu">
+  <ul class="nav__list" role="navigation"><li class="nav__item">
+        <a
+          href="/over-mij/"
+          class="nav__link"
+        >Over mij</a>
+    </li><li class="nav__item">
+        <a
+          href="/diensten/"
+          class="nav__link"
+        >Diensten</a>
+    </li><li class="nav__item">
+        <a
+          href="/faq/"
+          class="nav__link active" aria-current="page"
+        >F.A.Q.</a>
+    </li><li class="nav__item">
+        <a
+          href="/contact/"
+          class="nav__link"
+        >Contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+<script>
+(function () {
+  var OPEN_CLASS = 'is-open';
+  var TOGGLE_SEL = '.nav__toggle';
+
+  function closeItem(item) {
+    if (!item) return;
+    item.classList.remove(OPEN_CLASS);
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function openItem(item) {
+    if (!item) return;
+    item.classList.add(OPEN_CLASS);
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (toggle) toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function toggleItem(item) {
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (!toggle) return;
+    if (toggle.getAttribute('aria-expanded') === 'true') closeItem(item);
+    else openItem(item);
+  }
+
+  function closeAll() {
+    document.querySelectorAll('.nav__item.' + OPEN_CLASS).forEach(function (item) {
+      closeItem(item);
+    });
+  }
+
+  function init() {
+    
+    closeAll();
+
+    
+    document.querySelectorAll(TOGGLE_SEL).forEach(function (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var item = toggle.closest('.nav__item');
+        toggleItem(item);
+      });
+    });
+
+    
+    window.addEventListener('pageshow', function (ev) {
+      if (ev.persisted) closeAll();
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+
+    </div>
+</header>
+  <main>
+    <section class="title "><div class="wrapper wrapper--wide text--center"><h1 id="veel-gestelde-vragen">Veel gestelde vragen</h1>
+<ul class="breadcrumbs"><li><a href="/"></a></li><li><a href="/faq/">Veel gestelde vragen</a></li></ul></div></section>
+
+<section class="wide py-xl-3xl">
+    <div class="wrapper wrapper--wide">
+        <h3 class="mb-s-l">Algemene vragen</h3>
+			<div class="faqs"><details>
+						<summary>Wat doet Q en A Verzuimadvies precies?</summary>
+						<div>Wij helpen bedrijven en medewerkers bij verzuim en ziekte. We geven advies over wet- en regelgeving, re-integratie en preventie.</div>
+					</details><details>
+						<summary>Wie is Annemiek?</summary>
+						<div>Annemiek is de oprichter van Q en A Verzuimadvies. Ze heeft veel ervaring met verzuim en begeleidt werkgevers en werknemers persoonlijk.</div>
+					</details></div><h3 class="mb-s-l">Werkwijze</h3>
+			<div class="faqs"><details>
+						<summary>Hoe verloopt het adviestraject?</summary>
+						<div>We beginnen met een intakegesprek om de situatie te begrijpen. Daarna geven we advies op maat en ondersteunen we bij de uitvoering.</div>
+					</details><details>
+						<summary>Werkt u ook samen met HR-afdelingen?</summary>
+						<div>Ja, we werken nauw samen met HR en leidinggevenden om verzuim effectief te begeleiden en terugkeer naar werk soepel te laten verlopen.</div>
+					</details></div><h3 class="mb-s-l">Kosten en contact</h3>
+			<div class="faqs"><details>
+						<summary>Wat kost het om Q en A Verzuimadvies in te schakelen?</summary>
+						<div>De kosten zijn afhankelijk van de grootte van het bedrijf en de ondersteuning die nodig is. Neem contact met ons op voor een offerte op maat.</div>
+					</details><details>
+						<summary>Hoe kan ik contact opnemen?</summary>
+						<div>U kunt ons bereiken via telefoon, e-mail of het contactformulier op onze website. We reageren altijd snel.</div>
+					</details></div>
+
+    </div>
+</section>
+
+</main>
+  <footer class="[] [] [ py-l-xl ]">
+    <div class="wrapper">
+        <small>Copyright 2025 door Q &amp; A verzuimadvies. All rights reserved.</small>
+    </div>
+</footer>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

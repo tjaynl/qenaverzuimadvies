@@ -1,0 +1,12 @@
+{{- $inner := . -}}
+{{- if or (eq $inner "") (eq $inner nil) -}}
+    {{- $inner = "Empty block found. Consider creating a 'content/blocks/wide.md' file." -}}
+    {{- with page.Site.GetPage "blocks/wide.md" -}}
+        {{- $inner = .RawContent -}}
+    {{- end -}}
+{{- end -}}
+<section class="wide py-xl-3xl">
+    <div class="wrapper wrapper--wide">
+        {{ if eq (substr (markdownify $inner) 0 1) "<" }}{{- markdownify $inner -}}{{ else }}<p>{{- markdownify $inner -}}</p>{{ end }}
+    </div>
+</section>

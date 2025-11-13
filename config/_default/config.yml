@@ -1,0 +1,10 @@
+baseURL: "https://qenaverzuimadvies.nl"
+title: "Q & A verzuimadvies"
+theme: "qena"
+
+# -- Robot --
+enableRobotTXT: true
+
+# -- Languages --
+languageCode: "nl-nl"
+defaultContentLanguage: nl

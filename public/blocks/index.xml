@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blocks on Q &amp; A verzuimadvies</title>
+    <link>http://localhost:1313/blocks/</link>
+    <description>Recent content in Blocks on Q &amp; A verzuimadvies</description>
+    <generator>Hugo</generator>
+    <language>nl</language>
+    <atom:link href="http://localhost:1313/blocks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blocks/reviews/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blocks/reviews/</guid>
+      <description>&lt;h2 id=&#34;wat-klanten-zeggen-over-q-en-a-verzuimadvies&#34;&gt;Wat klanten zeggen over Q en A Verzuimadvies&lt;/h2&gt;&#xA;&lt;p&gt;Neem niet alleen ons woord ervoor – lees wat enkele van onze tevreden klanten te zeggen hebben! Bekijk hieronder een aantal van hun ervaringen met Q en A Verzuimadvies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>cta</title>
+      <link>http://localhost:1313/blocks/cta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blocks/cta/</guid>
+      <description>&lt;h2 id=&#34;ga-vandaag-nog-aan-de-slag-met-q-en-a-verzuimadvies&#34;&gt;Ga vandaag nog aan de slag met Q en A Verzuimadvies&lt;/h2&gt;&#xA;&lt;p&gt;Krijg grip op verzuim binnen uw organisatie met persoonlijk en deskundig advies van Annemiek. Samen werken we aan een gezonde en betrokken werkvloer.&lt;/p&gt;&#xA;&lt;a href=&#34;http://localhost:1313/contact/&#34; class=&#34;button&#34; title=&#34;Neem contact op&#34;&gt;Neem contact op&lt;/a&gt;&#xA;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/undraw_teamwork_8val.svg&#34; alt=&#34;&#34; class=&#34;is_svg&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

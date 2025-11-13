@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Q &amp; A verzuimadvies</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Q &amp; A verzuimadvies</description>
+    <generator>Hugo</generator>
+    <language>nl</language>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Re-Intergratie</title>
+      <link>http://localhost:1313/tags/re-intergratie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/re-intergratie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Verzuim</title>
+      <link>http://localhost:1313/tags/verzuim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/verzuim/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Basic page 1 | Q &amp; A verzuimadvies</title>
+
+    
+    
+        
+            <link rel="stylesheet" href="/css/main.css">
+        
+    
+
+
+
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner wrapper">
+        <a href="/" class="brand">
+            <span>Q &amp; A verzuimadvies</span>
+        </a>
+        <button class="hamburger">
+            <span class="bar bar--1"></span>
+            <span class="bar bar--2"></span>
+            <span class="bar bar--3"></span>
+        </button>
+        
+<nav class="nav" aria-label="Hoofdmenu">
+  <ul class="nav__list" role="navigation"><li class="nav__item">
+        <a
+          href="/over-mij/"
+          class="nav__link"
+        >Over mij</a>
+    </li><li class="nav__item">
+        <a
+          href="/diensten/"
+          class="nav__link"
+        >Diensten</a>
+    </li><li class="nav__item">
+        <a
+          href="/faq/"
+          class="nav__link"
+        >F.A.Q.</a>
+    </li><li class="nav__item">
+        <a
+          href="/contact/"
+          class="nav__link"
+        >Contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+<script>
+(function () {
+  var OPEN_CLASS = 'is-open';
+  var TOGGLE_SEL = '.nav__toggle';
+
+  function closeItem(item) {
+    if (!item) return;
+    item.classList.remove(OPEN_CLASS);
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function openItem(item) {
+    if (!item) return;
+    item.classList.add(OPEN_CLASS);
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (toggle) toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function toggleItem(item) {
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (!toggle) return;
+    if (toggle.getAttribute('aria-expanded') === 'true') closeItem(item);
+    else openItem(item);
+  }
+
+  function closeAll() {
+    document.querySelectorAll('.nav__item.' + OPEN_CLASS).forEach(function (item) {
+      closeItem(item);
+    });
+  }
+
+  function init() {
+    
+    closeAll();
+
+    
+    document.querySelectorAll(TOGGLE_SEL).forEach(function (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var item = toggle.closest('.nav__item');
+        toggleItem(item);
+      });
+    });
+
+    
+    window.addEventListener('pageshow', function (ev) {
+      if (ev.persisted) closeAll();
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+
+    </div>
+</header>
+  <main>
+    <section class="wide py-xl-3xl">
+    <div class="wrapper wrapper--wide">
+        <h1 id="basic-page-1">Basic page 1</h1>
+<ul class="breadcrumbs"><li><a href="/"></a></li><li><a href="/basic/">Basic page 1</a></li></ul>
+<p>Lorem dolor sit amet, consectetur adipiscing elit. Nam non laoreet nisi, ac hendrerit lacus. Sed eget dapibus dui. Phasellus non ante sollicitudin, ultrices ex et, convallis orci. Etiam laoreet justo neque. Aenean nec porta mauris, ut luctus nibh. Morbi sed quam rhoncus felis tempus porttitor a nec nisl. Nulla facilisi. In suscipit velit sed lacus condimentum, at <a href="https://www.google.com">fermentum</a> nulla faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+<h2 id="heading-2">Heading 2</h2>
+<p>Nam elementum bibendum augue quis hendrerit. Sed lectus neque, efficitur id velit eget, feugiat ultricies mauris. Aliquam et dictum sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="https://www.google.com">Maecenas</a> molestie sodales bibendum. Nullam egestas nulla eget justo cursus, vitae convallis nibh fermentum. Phasellus ornare, purus in dapibus gravida, diam odio feugiat lectus, in efficitur dolor ante ut odio.</p>
+<h3 id="heading-3">Heading 3</h3>
+<p>Proin ac <em>lobortis</em> tellus, ut <a href="https://www.google.com">maximus</a> magna. Aliquam facilisis risus sit amet augue congue varius. Duis augue nulla, aliquam vitae efficitur eget, bibendum et tellus. Aenean quis sagittis felis.</p>
+<h3 id="heading-3-1">Heading 3</h3>
+<p>Donec rutrum felis dignissim nisl tincidunt, sit amet interdum dolor ornare. Cras id hendrerit eros. Curabitur tincidunt est magna, ac commodo quam fringilla id. Nullam at imperdiet justo. Donec <strong>dolor quis</strong> nibh <em>rutrum facilisis</em> sed vulputate pellentesque. Vivamus id mollis arcu. Cras porttitor eros erat, at semper ligula ultricies nec. Nam lectus ex, mollis efficitur erat pulvinar, gravida faucibus massa.</p>
+
+    </div>
+</section>
+
+</main>
+  <footer class="[] [] [ py-l-xl ]">
+    <div class="wrapper">
+        <small>Copyright 2025 door Q &amp; A verzuimadvies. All rights reserved.</small>
+    </div>
+</footer>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

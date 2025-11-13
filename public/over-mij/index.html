@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>title in here | Q &amp; A verzuimadvies</title>
+
+    
+    
+        
+            <link rel="stylesheet" href="/css/main.css">
+        
+    
+
+
+
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner wrapper">
+        <a href="/" class="brand">
+            <span>Q &amp; A verzuimadvies</span>
+        </a>
+        <button class="hamburger">
+            <span class="bar bar--1"></span>
+            <span class="bar bar--2"></span>
+            <span class="bar bar--3"></span>
+        </button>
+        
+<nav class="nav" aria-label="Hoofdmenu">
+  <ul class="nav__list" role="navigation"><li class="nav__item">
+        <a
+          href="/over-mij/"
+          class="nav__link active" aria-current="page"
+        >Over mij</a>
+    </li><li class="nav__item">
+        <a
+          href="/diensten/"
+          class="nav__link"
+        >Diensten</a>
+    </li><li class="nav__item">
+        <a
+          href="/faq/"
+          class="nav__link"
+        >F.A.Q.</a>
+    </li><li class="nav__item">
+        <a
+          href="/contact/"
+          class="nav__link"
+        >Contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+<script>
+(function () {
+  var OPEN_CLASS = 'is-open';
+  var TOGGLE_SEL = '.nav__toggle';
+
+  function closeItem(item) {
+    if (!item) return;
+    item.classList.remove(OPEN_CLASS);
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function openItem(item) {
+    if (!item) return;
+    item.classList.add(OPEN_CLASS);
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (toggle) toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function toggleItem(item) {
+    var toggle = item.querySelector(TOGGLE_SEL);
+    if (!toggle) return;
+    if (toggle.getAttribute('aria-expanded') === 'true') closeItem(item);
+    else openItem(item);
+  }
+
+  function closeAll() {
+    document.querySelectorAll('.nav__item.' + OPEN_CLASS).forEach(function (item) {
+      closeItem(item);
+    });
+  }
+
+  function init() {
+    
+    closeAll();
+
+    
+    document.querySelectorAll(TOGGLE_SEL).forEach(function (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var item = toggle.closest('.nav__item');
+        toggleItem(item);
+      });
+    });
+
+    
+    window.addEventListener('pageshow', function (ev) {
+      if (ev.persisted) closeAll();
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+
+    </div>
+</header>
+  <main>
+    <section class="about py-xl-3xl">
+    <div class="wrapper wrapper--small">
+        <p><img src="https://images.unsplash.com/photo-1759352675002-958a2cddf291?q=80&amp;w=735&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="This is not me" class="colorize_image" /></p>
+<h1 id="hey-mijn-naam-is-annemiek">Hey, mijn naam is Annemiek</h1>
+<p>Mijn naam is Annemiek Ooms en ik ben de oprichter van Q en A Verzuimadvies. Ik help bedrijven en medewerkers bij vragen over verzuim en ziekte. Mijn doel is om iedereen snel en veilig weer aan het werk te krijgen.</p>
+<p>Ik heb veel ervaring met wet- en regelgeving rondom verzuim en weet hoe belangrijk goede begeleiding is. Ik luister naar de situatie van zowel werkgever als werknemer en geef duidelijk advies dat past bij de situatie.</p>
+<p>Voor mij staat een gezonde werkplek voorop. Door samen te werken met bedrijven en medewerkers, kunnen we verzuim voorkomen en zorgen voor een prettige werkomgeving.</p>
+<p>Ik vind het belangrijk dat u altijd weet waar u aan toe bent. Daarom werk ik eerlijk, praktisch en betrokken.</p>
+<p>Wilt u weten wat ik voor uw organisatie kan betekenen? Neem gerust contact met mij op!</p>
+
+    </div>
+</section>
+
+</main>
+  <footer class="[] [] [ py-l-xl ]">
+    <div class="wrapper">
+        <small>Copyright 2025 door Q &amp; A verzuimadvies. All rights reserved.</small>
+    </div>
+</footer>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

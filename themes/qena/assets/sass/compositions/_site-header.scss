@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// Site header
+// -----------------------------------------------------------------------------
+
+.site-header {
+    box-shadow: var(--shadow-xs);
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        min-height: fit-content;
+        padding-block: var(--space-xs);
+    }
+}
